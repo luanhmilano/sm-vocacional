@@ -17,9 +17,8 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 h-14 bg-stone-900/90 backdrop-blur-md lg:h-16">
+        <header className="sticky top-0 z-50 h-14 bg-movimento-red/95 backdrop-blur-md lg:h-16">
             <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 lg:px-8">
-                {/* LOGO */}
                 <a
                     href="#"
                     onClick={(e) => {
@@ -28,13 +27,12 @@ export default function Navbar() {
                     }}
                     className="flex items-center gap-2 text-white"
                 >
-                    <Flame className="h-5 w-5 text-amber-400" strokeWidth={1.75} />
+                    <Flame className="h-5 w-5 text-movimento-gold" strokeWidth={1.75} />
                     <span className="text-sm font-semibold uppercase tracking-[0.25em]">
-                        Vocacional
+                        SM
                     </span>
                 </a>
 
-                {/* NAV LINKS (desktop) */}
                 <nav className="hidden items-center gap-8 lg:flex">
                     {navLinks.map((link) => (
                         <button
@@ -47,7 +45,6 @@ export default function Navbar() {
                     ))}
                 </nav>
 
-                {/* HAMBURGER (mobile) */}
                 <button
                     aria-label={open ? "Fechar menu" : "Abrir menu"}
                     aria-expanded={open}
@@ -58,9 +55,8 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* MOBILE MENU DROPDOWN */}
             {open && (
-                <div className="border-t border-white/10 bg-stone-900 lg:hidden">
+                <div className="border-t border-white/10 bg-movimento-red lg:hidden">
                     <nav className="flex flex-col px-5 py-4">
                         {navLinks.map((link) => (
                             <button

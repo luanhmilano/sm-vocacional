@@ -4,7 +4,7 @@ export default function Testemonial() {
             {/* VÍDEOS E TEXTOS DE TESTEMUNHO */}
             <div className="mx-auto max-w-6xl">
                 <div className="max-w-3xl">
-                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-stone-500">Testemunhos</p>
+                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-movimento-blue">Testemunhos</p>
                     <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Experiências de quem já percorreu esse caminho</h2>
                 </div>
 

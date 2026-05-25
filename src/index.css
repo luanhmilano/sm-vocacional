@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+  --color-movimento-red: #AF1B25;
+  --color-movimento-blue: #0095D9;
+  --color-movimento-pink: #F389A0;
+  --color-movimento-gold: #D4AF37;
+}

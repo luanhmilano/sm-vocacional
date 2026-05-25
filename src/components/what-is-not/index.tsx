@@ -4,7 +4,7 @@ export default function WhatIsNot() {
             {/* O QUE NÃO É O PROCESSO VOCACIONAL */}
             <div className="mx-auto max-w-6xl">
                 <div className="max-w-3xl">
-                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-stone-500">O que não é</p>
+                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-movimento-blue">O que não é</p>
                     <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Limites importantes para entender o processo</h2>
                 </div>
 

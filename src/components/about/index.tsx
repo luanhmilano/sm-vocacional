@@ -4,7 +4,7 @@ export default function About() {
             {/* CARDS, ÍCONES E FOTOS DE ALGUMAS MISSÕES */}
             <div className="mx-auto max-w-6xl">
                 <div className="max-w-3xl">
-                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-stone-500">Sobre o movimento</p>
+                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-movimento-blue">Sobre o movimento</p>
                     <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Conheça a história, o carisma e a forma de viver essa missão</h2>
                 </div>
 
