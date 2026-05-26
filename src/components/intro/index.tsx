@@ -22,7 +22,7 @@ export default function Intro() {
                 <EmblaCarousel
                     images={carouselImages}
                     className="h-full"
-                    imageClassName="block h-full w-full object-cover brightness-20"
+                    imageClassName="block h-full w-full object-cover brightness-25"
                 />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 px-6 text-center text-white sm:gap-2">
@@ -52,7 +52,7 @@ export default function Intro() {
                     onClick={scrollToAbout}
                     className="mt-1 rounded-full bg-brand-crimson px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-crimson/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-crimson sm:px-10 sm:py-4 sm:text-base"
                 >
-                    Continuar
+                    Quero conhecer o processo
                 </button>
             </div>
         </section>

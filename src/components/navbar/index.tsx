@@ -1,12 +1,17 @@
 ﻿import { Flame, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import ProgressStepper from "./ProgressStepper";
 
 const navLinks = [
-    { label: "Sobre", href: "#about" },
-    { label: "O que é", href: "#what-is" },
-    { label: "Etapas", href: "#timeline" },
-    { label: "Inscrição", href: "#checklist" },
+    { id: "about", label: "Sobre", href: "#about" },
+    { id: "what-is", label: "O que é", href: "#what-is" },
+    { id: "timeline", label: "Etapas", href: "#timeline" },
+    { id: "checklist", label: "Inscrição", href: "#checklist" },
 ];
+
+// IDs das seções para o IntersectionObserver
+const sectionIds = ["intro", ...navLinks.map((link) => link.id), "footer"];
 
 function scrollTo(href: string) {
     const id = href.replace("#", "");
@@ -16,9 +21,23 @@ function scrollTo(href: string) {
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
+    // Detecta qual seção está ativa usando IntersectionObserver
+    const activeSection = useIntersectionObserver(sectionIds, {
+        threshold: 0.3,
+        rootMargin: "-20% 0px -35% 0px",
+    });
+
+    // Steps para o ProgressStepper
+    const steps = [
+        { id: "intro", label: "Início" },
+        ...navLinks.map((link) => ({ id: link.id, label: link.label })),
+        { id: "footer", label: "Contato" },
+    ];
+
     return (
-        <header className="sticky top-0 z-50 h-14 bg-brand-pearl/95 backdrop-blur-md lg:h-16">
-            <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 lg:px-8">
+        <header className="sticky top-0 z-50 bg-brand-pearl/95 backdrop-blur-md">
+            {/* Primeira linha: Logo e Menu */}
+            <div className="mx-auto flex h-14 lg:h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
                 <a
                     href="#"
                     onClick={(e) => {
@@ -32,6 +51,11 @@ export default function Navbar() {
                         SM
                     </span>
                 </a>
+
+                {/* Progress Stepper - Desktop */}
+                <div className="hidden lg:flex flex-1 justify-center">
+                    <ProgressStepper steps={steps} activeSection={activeSection} />
+                </div>
 
                 <nav className="hidden items-center gap-8 lg:flex">
                     {navLinks.map((link) => (
@@ -53,6 +77,11 @@ export default function Navbar() {
                 >
                     {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </button>
+            </div>
+
+            {/* Progress Stepper - Mobile (abaixo do header) */}
+            <div className="lg:hidden px-5 py-2 border-t border-brand-sand/20">
+                <ProgressStepper steps={steps} activeSection={activeSection} />
             </div>
 
             {open && (

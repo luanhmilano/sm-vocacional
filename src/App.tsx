@@ -25,30 +25,46 @@ function App() {
       <Navbar />
       <main className="bg-brand-pearl text-brand-sienna">
         <FadeInScroll>
-          <Intro />
+          <section id="intro">
+            <Intro />
+          </section>
         </FadeInScroll>
 
         <Suspense fallback={<SectionFallback />}>
           <FadeInScroll>
-            <About />
+            <section id="about">
+              <About />
+            </section>
           </FadeInScroll>
           <FadeInScroll>
-            <WhatIs />
+            <section id="what-is">
+              <WhatIs />
+            </section>
           </FadeInScroll>
           <FadeInScroll>
-            <WhatIsNot />
+            <section id="what-is-not">
+              <WhatIsNot />
+            </section>
           </FadeInScroll>
           <FadeInScroll>
-            <Timeline />
+            <section id="timeline">
+              <Timeline />
+            </section>
           </FadeInScroll>
           <FadeInScroll>
-            <Testemonial />
+            <section id="testimonial">
+              <Testemonial />
+            </section>
           </FadeInScroll>
           <FadeInScroll>
-            <Checklist />
+            <section id="checklist">
+              <Checklist />
+            </section>
           </FadeInScroll>
           <FadeInScroll>
-            <FooterCTA />
+            <section id="footer">
+              <FooterCTA />
+            </section>
           </FadeInScroll>
         </Suspense>
       </main>

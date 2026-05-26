@@ -1,6 +1,6 @@
 ﻿export default function Checklist() {
     return (
-        <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <section id="checklist" className="px-4 py-16 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-4xl rounded-3xl bg-brand-pearl/50 px-6 py-8 shadow-sm ring-1 ring-brand-cream sm:px-8 sm:py-10">
                 <div className="max-w-2xl">
                     <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-sienna">Antes de iniciar</p>
