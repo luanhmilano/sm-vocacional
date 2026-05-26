@@ -1,6 +1,8 @@
-import img1 from "../../assets/img-carrosel-1.jpeg";
+﻿import img1 from "../../assets/img-carrosel-1.jpeg";
 import img2 from "../../assets/img-carrosel-2.jpeg";
 import img3 from "../../assets/img-carrosel-3.jpeg";
+import logo from "../../assets/main-logo.png";
+
 import { EmblaCarousel } from "../utils/embla";
 
 const carouselImages = [
@@ -16,37 +18,39 @@ function scrollToAbout() {
 export default function Intro() {
     return (
         <section className="flex h-[calc(100svh-3.5rem)] flex-col lg:h-[calc(100svh-4rem)]">
-            <div className="relative h-[50svh] shrink-0 lg:h-3/5 lg:max-h-[615px]">
+            <div className="relative h-[50svh] shrink-0 md:h-3/6 md:max-h-[615px] lg:h-3/6 lg:max-h-[615px]">
                 <EmblaCarousel
                     images={carouselImages}
                     className="h-full"
-                    imageClassName="block h-full w-full object-cover brightness-50"
+                    imageClassName="block h-full w-full object-cover brightness-20"
                 />
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white">
-                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-white/70 sm:text-sm">
-                        Sementes da Misericórdia
-                    </p>
-                    <h1 className="max-w-2xl text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 px-6 text-center text-white sm:gap-2">
+                    <img src={logo} alt="Sementes da Misericórdia" className="h-40 w-auto object-contain sm:h-44 md:h-44 lg:h-40" />
+                    <h1 className="text-xl font-semibold tracking-widest uppercase sm:text-2xl md:text-2xl lg:text-3xl">
                         Processo Vocacional 2026
                     </h1>
+                    <hr className="w-16 border-t border-white/50 sm:w-20" />
+                    <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/70 sm:text-sm md:text-sm">
+                        Movimento Sementes da Misericórdia
+                    </p>
                 </div>
             </div>
 
             {/* CITAÇÃO + BOTÃO */}
-            <div className="flex flex-1 flex-col items-center justify-center gap-5 bg-white px-6 text-center sm:px-10">
+            <div className="flex flex-1 flex-col items-center justify-center gap-5 bg-brand-pearl px-6 text-center sm:px-10">
                 <blockquote className="max-w-2xl">
-                    <p className="text-2xl leading-snug font-light tracking-tight text-stone-900 sm:text-3xl lg:text-4xl xl:text-5xl">
+                    <p className="text-3xl leading-snug font-light tracking-tight text-brand-sienna sm:text-2xl md:text-3xl lg:text-3xl xl:text-5xl">
                         "Não fostes vós que me escolhestes; fui eu que vos escolhi."
                     </p>
-                    <footer className="mt-3 text-sm font-semibold uppercase tracking-[0.3em] text-movimento-blue sm:text-base">
+                    <footer className="mt-3 text-sm font-semibold uppercase tracking-[0.3em] text-brand-sienna sm:text-base">
                         João 15, 16
                     </footer>
                 </blockquote>
 
                 <button
                     onClick={scrollToAbout}
-                    className="mt-1 rounded-full bg-movimento-red px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-movimento-red/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-movimento-red sm:px-10 sm:py-4 sm:text-base"
+                    className="mt-1 rounded-full bg-brand-crimson px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-crimson/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-crimson sm:px-10 sm:py-4 sm:text-base"
                 >
                     Continuar
                 </button>

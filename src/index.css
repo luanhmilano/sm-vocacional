@@ -1,8 +1,18 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @theme {
-  --color-movimento-red: #AF1B25;
-  --color-movimento-blue: #0095D9;
-  --color-movimento-pink: #F389A0;
-  --color-movimento-gold: #D4AF37;
+  --color-brand-sienna: #724B3C;
+  --color-brand-crimson: #9A5034;
+  --color-brand-sand: #C39B7F;
+  --color-brand-cream: #D9C4B0;
+  --color-brand-pearl: #EFE5DF;
+
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: Montserrat, sans-serif;
 }
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+}
+

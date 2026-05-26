@@ -1,4 +1,4 @@
-import { Flame, Menu, X } from "lucide-react";
+﻿import { Flame, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -17,7 +17,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 h-14 bg-movimento-red/95 backdrop-blur-md lg:h-16">
+        <header className="sticky top-0 z-50 h-14 bg-brand-pearl/95 backdrop-blur-md lg:h-16">
             <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 lg:px-8">
                 <a
                     href="#"
@@ -27,8 +27,8 @@ export default function Navbar() {
                     }}
                     className="flex items-center gap-2 text-white"
                 >
-                    <Flame className="h-5 w-5 text-movimento-gold" strokeWidth={1.75} />
-                    <span className="text-sm font-semibold uppercase tracking-[0.25em]">
+                    <Flame className="h-5 w-5 text-brand-sand" strokeWidth={1.75} />
+                    <span className="text-sm text-black font-semibold uppercase tracking-[0.25em]">
                         SM
                     </span>
                 </a>
@@ -38,7 +38,7 @@ export default function Navbar() {
                         <button
                             key={link.href}
                             onClick={() => scrollTo(link.href)}
-                            className="text-sm font-medium tracking-wide text-white/70 transition-colors hover:text-white"
+                            className="text-sm font-medium tracking-wide text-black transition-colors hover:text-white"
                         >
                             {link.label}
                         </button>
@@ -49,14 +49,14 @@ export default function Navbar() {
                     aria-label={open ? "Fechar menu" : "Abrir menu"}
                     aria-expanded={open}
                     onClick={() => setOpen((v) => !v)}
-                    className="flex items-center justify-center text-white lg:hidden"
+                    className="flex items-center justify-center text-black lg:hidden"
                 >
                     {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </button>
             </div>
 
             {open && (
-                <div className="border-t border-white/10 bg-movimento-red lg:hidden">
+                <div className="border-t border-white/10 bg-brand-crimson lg:hidden">
                     <nav className="flex flex-col px-5 py-4">
                         {navLinks.map((link) => (
                             <button

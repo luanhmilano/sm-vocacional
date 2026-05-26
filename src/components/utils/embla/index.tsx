@@ -1,4 +1,4 @@
-import Autoplay from "embla-carousel-autoplay";
+﻿import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useState } from "react";
 

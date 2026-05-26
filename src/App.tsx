@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react"
+﻿import { lazy, Suspense } from "react"
 import Navbar from "./components/navbar"
 import Intro from "./components/intro"
 import { FadeInScroll } from "./components/utils/wrapper"
@@ -14,7 +14,7 @@ const WhatIsNot = lazy(() => import("./components/what-is-not"))
 function SectionFallback() {
   return (
     <div className="w-full py-24 flex items-center justify-center">
-      <span className="block w-8 h-8 rounded-full border-2 border-stone-200 border-t-movimento-red animate-spin" />
+      <span className="block w-8 h-8 rounded-full border-2 border-brand-cream border-t-brand-crimson animate-spin" />
     </div>
   )
 }
@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className="bg-white text-stone-900">
+      <main className="bg-brand-pearl text-brand-sienna">
         <FadeInScroll>
           <Intro />
         </FadeInScroll>
