@@ -1,4 +1,5 @@
-﻿import img1 from '../../assets/img-carrosel-1.jpeg';
+﻿import { HeartIcon } from '@phosphor-icons/react';
+import img1 from '../../assets/img-carrosel-1.jpeg';
 import img2 from '../../assets/img-carrosel-2.jpeg';
 import img3 from '../../assets/img-carrosel-3.jpeg';
 import { FadeInScroll } from '../utils/wrapper';
@@ -43,6 +44,7 @@ export default function About() {
             <div className="mx-auto max-w-4xl">
                 <FadeInScroll>
                     <div className="max-w-3xl">
+                        <HeartIcon className="h-6 w-6 text-brand-sienna" weight={"thin"} />
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-sienna">Sobre o movimento</p>
                         <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Conheça a história, o carisma e a forma de viver essa missão</h2>
                     </div>

@@ -1,9 +1,12 @@
-﻿export default function Timeline() {
+﻿import { FootprintsIcon } from "@phosphor-icons/react";
+
+export default function Timeline() {
     return (
         <section id="timeline" className="px-4 py-16 sm:px-6 lg:px-8">
             {/* TIMELINE VERTICAL DAS ETAPAS DO PROCESSO */}
             <div className="mx-auto max-w-4xl rounded-3xl bg-brand-pearl/50 px-6 py-8 shadow-sm ring-1 ring-brand-cream sm:px-8 sm:py-10">
                 <div className="max-w-2xl">
+                    <FootprintsIcon className="h-6 w-6 text-brand-sienna" weight={"thin"} />
                     <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-sienna">Etapas</p>
                     <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Caminho de acompanhamento vocacional</h2>
                 </div>

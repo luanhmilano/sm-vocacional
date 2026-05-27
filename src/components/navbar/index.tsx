@@ -1,4 +1,5 @@
-﻿import { Flame, Menu, X } from "lucide-react";
+﻿import { Menu, X } from "lucide-react";
+import { CrownIcon } from "@phosphor-icons/react";
 import { useState } from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import ProgressStepper from "./ProgressStepper";
@@ -45,7 +46,7 @@ export default function Navbar() {
                     }}
                     className="flex items-center gap-2 text-white"
                 >
-                    <Flame className="h-5 w-5 text-brand-sand" strokeWidth={1.75} />
+                    <CrownIcon className="h-6 w-6" weight={"thin"} color="" />
                     <span className="text-sm text-black font-semibold uppercase tracking-[0.25em]">
                         SM
                     </span>
@@ -61,7 +62,7 @@ export default function Navbar() {
                         <button
                             key={link.href}
                             onClick={() => scrollTo(link.href)}
-                            className="text-sm font-medium tracking-wide text-black transition-colors hover:text-white"
+                            className="text-sm font-medium tracking-wide text-black transition-colors hover:scale-110 hover:underline cursor-pointer"
                         >
                             {link.label}
                         </button>
