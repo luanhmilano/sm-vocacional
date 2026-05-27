@@ -1,6 +1,6 @@
 ﻿export default function WhatIs() {
     return (
-        <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <section id="what-is" className="px-4 py-16 sm:px-6 lg:px-8">
             {/* ESTRUTURA DO PROCESSO VOCACIONAL */}
             <div className="mx-auto max-w-6xl rounded-3xl bg-brand-pearl/50 px-6 py-8 shadow-sm ring-1 ring-brand-cream sm:px-8 sm:py-10">
                 <div className="max-w-3xl">

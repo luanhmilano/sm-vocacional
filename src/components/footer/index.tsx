@@ -11,7 +11,7 @@ const url = `https://wa.me/${phone}?text=${text}`;
 export default function FooterCTA() {
   return (
     <>
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section id="footer" className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-5xl flex-col gap-8 rounded-3xl bg-brand-crimson px-6 py-10 text-white sm:px-8 sm:py-12 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">

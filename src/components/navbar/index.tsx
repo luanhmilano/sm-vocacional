@@ -6,12 +6,21 @@ import ProgressStepper from "./ProgressStepper";
 const navLinks = [
     { id: "about", label: "Sobre", href: "#about" },
     { id: "what-is", label: "O que é", href: "#what-is" },
+    { id: "what-is-not", label: "O que não é", href: "#what-is-not" },
     { id: "timeline", label: "Etapas", href: "#timeline" },
+    { id: "testimonial", label: "Depoimentos", href: "#testimonial" },
     { id: "checklist", label: "Inscrição", href: "#checklist" },
 ];
 
-// IDs das seções para o IntersectionObserver
-const sectionIds = ["intro", ...navLinks.map((link) => link.id), "footer"];
+// Steps do ProgressStepper (mesma ordem das seções na página)
+const steps = [
+    { id: "intro", label: "Início" },
+    ...navLinks.map((link) => ({ id: link.id, label: link.label })),
+    { id: "footer", label: "Contato" },
+];
+
+// IDs das seções para o IntersectionObserver — derivado dos steps para garantir sincronia
+const sectionIds = steps.map((step) => step.id);
 
 function scrollTo(href: string) {
     const id = href.replace("#", "");
@@ -21,18 +30,8 @@ function scrollTo(href: string) {
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
-    // Detecta qual seção está ativa usando IntersectionObserver
-    const activeSection = useIntersectionObserver(sectionIds, {
-        threshold: 0.3,
-        rootMargin: "-20% 0px -35% 0px",
-    });
-
-    // Steps para o ProgressStepper
-    const steps = [
-        { id: "intro", label: "Início" },
-        ...navLinks.map((link) => ({ id: link.id, label: link.label })),
-        { id: "footer", label: "Contato" },
-    ];
+    // Detecta qual seção está ativa com base na posição de scroll
+    const activeSection = useIntersectionObserver(sectionIds);
 
     return (
         <header className="sticky top-0 z-50 bg-brand-pearl/95 backdrop-blur-md">

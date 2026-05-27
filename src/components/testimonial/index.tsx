@@ -38,7 +38,7 @@ const textTestimonials = [
 
 export default function Testemonial() {
     return (
-        <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <section id="testimonial" className="px-4 py-16 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-4xl">
                 <div className="max-w-3xl">
                     <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-sienna">Testemunhos</p>

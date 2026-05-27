@@ -17,7 +17,7 @@ function scrollToAbout() {
 
 export default function Intro() {
     return (
-        <section className="flex h-[calc(100svh-3.5rem)] flex-col lg:h-[calc(100svh-4rem)]">
+        <section id="intro" className="flex h-[calc(100svh-3.5rem)] flex-col lg:h-[calc(100svh-4rem)]">
             <div className="relative h-[50svh] shrink-0 md:h-3/6 md:max-h-[615px] lg:h-3/6 lg:max-h-[615px]">
                 <EmblaCarousel
                     images={carouselImages}

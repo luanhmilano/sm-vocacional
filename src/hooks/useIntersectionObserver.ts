@@ -1,49 +1,30 @@
 import { useEffect, useState } from "react";
 
-interface UseIntersectionObserverOptions {
-  threshold?: number;
-  root?: Element | null;
-  rootMargin?: string;
-}
-
-export function useIntersectionObserver(
-  sectionIds: string[],
-  options: UseIntersectionObserverOptions = {}
-) {
+export function useIntersectionObserver(sectionIds: string[]) {
   const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
-    const observerOptions: IntersectionObserverInit = {
-      threshold: options.threshold || 0.3,
-      root: options.root || null,
-      rootMargin: options.rootMargin || "-20% 0px -35% 0px",
-    };
+    const triggerPoint = window.innerHeight * 0.35;
 
-    const observerCallback: IntersectionObserverCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+    const getActiveSection = () => {
+      let current = sectionIds[0] ?? "";
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= triggerPoint) {
+          current = id;
         }
-      });
+      }
+      setActiveSection(current);
     };
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
-
-    // Observar todas as seções
-    sectionIds.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) {
-        observer.observe(element);
-      }
-    });
+    window.addEventListener("scroll", getActiveSection, { passive: true });
+    getActiveSection();
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener("scroll", getActiveSection);
     };
-  }, [sectionIds, options.threshold, options.root, options.rootMargin]);
+  }, [sectionIds]);
 
   return activeSection;
 }

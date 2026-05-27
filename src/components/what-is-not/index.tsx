@@ -1,6 +1,6 @@
 ﻿export default function WhatIsNot() {
     return (
-        <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <section id="what-is-not" className="px-4 py-16 sm:px-6 lg:px-8">
             {/* O QUE NÃO É O PROCESSO VOCACIONAL */}
             <div className="mx-auto max-w-6xl">
                 <div className="max-w-3xl">

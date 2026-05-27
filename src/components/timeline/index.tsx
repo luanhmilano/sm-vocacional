@@ -1,6 +1,6 @@
 ﻿export default function Timeline() {
     return (
-        <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <section id="timeline" className="px-4 py-16 sm:px-6 lg:px-8">
             {/* TIMELINE VERTICAL DAS ETAPAS DO PROCESSO */}
             <div className="mx-auto max-w-4xl rounded-3xl bg-brand-pearl/50 px-6 py-8 shadow-sm ring-1 ring-brand-cream sm:px-8 sm:py-10">
                 <div className="max-w-2xl">
