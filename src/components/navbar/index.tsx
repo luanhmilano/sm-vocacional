@@ -1,8 +1,8 @@
 ﻿import { Menu, X } from "lucide-react";
-import { CrownIcon } from "@phosphor-icons/react";
 import { useState } from "react";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import ProgressStepper from "./ProgressStepper";
+import smLogoMonocrome from '../../assets/sm-logo-monocromatic.png';
 
 const navLinks = [
     { id: "about", label: "Sobre", href: "#about" },
@@ -46,10 +46,7 @@ export default function Navbar() {
                     }}
                     className="flex items-center gap-2 text-white"
                 >
-                    <CrownIcon className="h-6 w-6" weight={"thin"} color="" />
-                    <span className="text-sm text-black font-semibold uppercase tracking-[0.25em]">
-                        SM
-                    </span>
+                    <img src={smLogoMonocrome} alt="opa" width={50} height={50} />
                 </a>
 
                 {/* Progress Stepper - Desktop */}

@@ -1,7 +1,7 @@
 ﻿import img1 from "../../assets/img-carrosel-1.jpeg";
 import img2 from "../../assets/img-carrosel-2.jpeg";
 import img3 from "../../assets/img-carrosel-3.jpeg";
-import logo from "../../assets/main-logo.png";
+import logo from "../../assets/sementes-logo.png";
 
 import { EmblaCarousel } from "../utils/embla";
 
