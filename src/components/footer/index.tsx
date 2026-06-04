@@ -1,14 +1,28 @@
 ﻿import WhatsAppIcon from "../../assets/whatsapp-brands-solid-full.svg";
 import InstagramIcon from "../../assets/instagram-2016-logo-svgrepo-com.svg";
 import GmailIcon from "../../assets/gmail-svgrepo-com.svg";
+import { PRIMARY_PHONE, SECONDARY_PHONE } from "../utils/constants/zap-numbers.constant";
 
-const phone = "5511999999999";
+const phoneNumbers = [PRIMARY_PHONE, SECONDARY_PHONE];
+
 const text = encodeURIComponent(
-  "Olá! Conheci o Processo Vocacional 2026 pelo site e gostaria de receber mais informações sobre o caminho vocacional",
+  "Olá! Conheci o Processo Vocacional 2026 pelo site e gostaria de receber mais informações sobre o caminho vocacional.",
 );
-const url = `https://wa.me/${phone}?text=${text}`;
+
+function getRandomWhatsAppUrl() {
+  const phone = phoneNumbers[Math.floor(Math.random() * phoneNumbers.length)];
+
+  return `https://wa.me/${phone}?text=${text}`;
+}
 
 export default function FooterCTA() {
+  function handleWhatsAppClick(
+    event: React.MouseEvent<HTMLAnchorElement>,
+  ) {
+    event.preventDefault();
+    window.open(getRandomWhatsAppUrl(), "_blank", "noopener,noreferrer");
+  }
+
   return (
     <>
       <section id="footer" className="px-4 py-16 sm:px-6 lg:px-8">
@@ -26,10 +40,11 @@ export default function FooterCTA() {
 
           <div className="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-end">
             <a
-              href={url}
+              href={getRandomWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Contatar pelo WhatsApp"
+              onClick={handleWhatsAppClick}
               className="inline-flex items-center gap-3 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1ebe5b] transition sm:text-base"
             >
               <img

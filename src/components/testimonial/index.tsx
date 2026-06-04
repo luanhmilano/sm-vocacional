@@ -2,21 +2,6 @@
 import img2 from '../../assets/testimonials/alessandro-testimonial.jpg';
 import img3 from '../../assets/testimonials/emilly-testemonial.jpg';
 
-const videoTestimonials = [
-    {
-        url: 'https://www.youtube.com/embed/MN1PvG1ri20?si=CV5qyTXmD2gSBBN3',
-        name: 'Cássia',
-        level: 'Consagrada',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur nisi quisquam, obcaecati harum ad reiciendis nobis beatae iusto neque quaerat aliquam, est architecto facilis maxime.',
-    },
-    {
-        url: 'https://www.youtube.com/embed/zDyweCSUlrw?si=vAzMTJJXBIEmoDVE',
-        name: 'Laura',
-        level: 'Aspirante',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur nisi quisquam, obcaecati harum ad reiciendis nobis beatae iusto neque quaerat aliquam, est architecto facilis maxime.',
-    },
-];
-
 const textTestimonials = [
     {
         name: '1',
@@ -53,32 +38,7 @@ export default function Testemonial() {
                     <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Experiências de quem já percorreu esse caminho</h2>
                 </div>
 
-                {/* Vídeos */}
-                <div className="mt-10 grid gap-6">
-                    {videoTestimonials.map((item) => (
-                        <article
-                            key={item.url}
-                            className="overflow-hidden rounded-2xl bg-brand-pearl/50 shadow-sm ring-1 ring-brand-cream flex flex-col sm:flex-row"
-                        >
-                            <div className="relative w-full aspect-video sm:aspect-auto sm:h-72 sm:w-96 sm:shrink-0">
-                                <iframe
-                                    className="absolute inset-0 h-full w-full"
-                                    src={item.url}
-                                    title={item.name}
-                                    frameBorder="0"
-                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy="strict-origin-when-cross-origin"
-                                    allowFullScreen
-                                />
-                            </div>
-                            <div className="p-8 flex flex-col justify-center">
-                                <h3 className="text-xl font-bold">{item.name}</h3>
-                                <p className="text-sm font-semibold uppercase tracking-wide text-brand-sienna mt-1">{item.level}</p>
-                                <p className="mt-3 text-sm leading-7 text-brand-sienna/70 sm:text-base">{item.description}</p>
-                            </div>
-                        </article>
-                    ))}
-                </div>
+                
 
                 {/* Depoimentos em texto */}
                 <div className="mt-10 grid gap-6 sm:grid-cols-2">
