@@ -1,13 +1,14 @@
-﻿import img1 from '../../assets/img-carrosel-1.jpeg';
+﻿import img1 from '../../assets/testimonials/vitoria-testemonial.jpeg';
 import img2 from '../../assets/testimonials/alessandro-testimonial.jpg';
 import img3 from '../../assets/testimonials/emilly-testemonial.jpg';
+import img4 from '../../assets/img-carrosel-1.jpeg';
 
 const textTestimonials = [
     {
-        name: '1',
+        name: 'Vitória',
         level: 'Aspirante',
         imageUrl: img1,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto eos hic dignissimos consectetur nisi quisquam obcaecati harum ad reiciendis nobis beatae iusto.',
+        text: 'Meu processo está sendo lindo e fecundo, a cada encontro ou oração em comunidade eu renovo minha fé e acredito fielmente que o meu Deus está por mim, seja nós meu momentos de luz ou de trevas.',
     },
     {
         name: 'Alessandro',
@@ -24,7 +25,7 @@ const textTestimonials = [
     {
         name: '4',
         level: 'Aspirante',
-        imageUrl: img1,
+        imageUrl: img4,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto eos hic dignissimos consectetur nisi quisquam obcaecati harum ad reiciendis nobis beatae iusto.',
     },
 ];
