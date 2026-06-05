@@ -1,15 +1,6 @@
-﻿import img1 from "../../assets/img-carrosel-1.jpeg";
-import img2 from "../../assets/img-carrosel-2.jpeg";
-import img3 from "../../assets/img-carrosel-3.jpeg";
-import logo from "../../assets/sementes-logo.png";
+﻿import logo from "../../assets/sementes-logo.png";
 
-import { EmblaCarousel } from "../utils/embla";
-
-const carouselImages = [
-    { src: img1, alt: "Vocacional imagem 1" },
-    { src: img2, alt: "Vocacional imagem 2" },
-    { src: img3, alt: "Vocacional imagem 3" },
-];
+import banner from "../../assets/banner-jesus.png";
 
 function scrollToAbout() {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
@@ -18,15 +9,17 @@ function scrollToAbout() {
 export default function Intro() {
     return (
         <section id="intro" className="flex h-[calc(100svh-3.5rem)] flex-col lg:h-[calc(100svh-4rem)]">
-            <div className="relative h-[50svh] shrink-0 md:h-3/6 md:max-h-[615px] lg:h-3/6 lg:max-h-[615px]">
-                <EmblaCarousel
-                    images={carouselImages}
-                    className="h-full"
-                    imageClassName="block h-full w-full object-cover brightness-25"
+            <div className="relative h-[50svh] shrink-0 overflow-hidden bg-brand-pearl md:h-3/6 md:max-h-[615px] lg:h-3/6 lg:max-h-[615px]">
+                <img
+                    src={banner}
+                    alt="Banner principal do Processo Vocacional 2026"
+                    className="absolute top-0 left-1/2 h-full w-screen max-w-none -translate-x-1/2 object-cover object-center opacity-75"
                 />
 
+                <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
+
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 px-6 text-center text-white sm:gap-2">
-                    <img src={logo} alt="Sementes da Misericórdia" className="h-40 w-auto object-contain sm:h-44 md:h-44 lg:h-40" />
+                    <img src={logo} alt="Sementes da Misericórdia" className="h-40 w-auto object-contain sm:h-44 md:h-44 lg:h-40 opacity-40" />
                     <h1 className="text-xl font-semibold tracking-widest uppercase sm:text-2xl md:text-2xl lg:text-3xl">
                         Processo Vocacional 2026
                     </h1>
