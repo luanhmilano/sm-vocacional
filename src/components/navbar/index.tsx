@@ -42,7 +42,11 @@ export default function Navbar() {
                     }}
                     className="flex items-center gap-2 text-white"
                 >
-                    <img src={smLogoMonocrome} alt="opa" width={50} height={50} />
+                    <img
+                        src={smLogoMonocrome}
+                        alt="Logo do Processo Vocacional"
+                        className="h-auto w-[clamp(2.5rem,8vw,3.125rem)] shrink-0 object-contain"
+                    />
                 </a>
             
                 <div className="hidden lg:flex flex-1 justify-center">
