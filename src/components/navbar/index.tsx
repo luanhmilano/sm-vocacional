@@ -13,30 +13,26 @@ const navLinks = [
     { id: "checklist", label: "Inscrição", href: "#checklist" },
 ];
 
-// Steps do ProgressStepper (mesma ordem das seções na página)
 const steps = [
     { id: "intro", label: "Início" },
     ...navLinks.map((link) => ({ id: link.id, label: link.label })),
     { id: "footer", label: "Contato" },
 ];
 
-// IDs das seções para o IntersectionObserver — derivado dos steps para garantir sincronia
 const sectionIds = steps.map((step) => step.id);
 
 function scrollTo(href: string) {
     const id = href.replace("#", "");
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
-    // Detecta qual seção está ativa com base na posição de scroll
     const activeSection = useIntersectionObserver(sectionIds);
 
     return (
         <header className="sticky top-0 z-50 bg-brand-pearl/95 backdrop-blur-md">
-            {/* Primeira linha: Logo e Menu */}
             <div className="mx-auto flex h-14 lg:h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
                 <a
                     href="#"
@@ -48,8 +44,7 @@ export default function Navbar() {
                 >
                     <img src={smLogoMonocrome} alt="opa" width={50} height={50} />
                 </a>
-
-                {/* Progress Stepper - Desktop */}
+            
                 <div className="hidden lg:flex flex-1 justify-center">
                     <ProgressStepper steps={steps} activeSection={activeSection} />
                 </div>
@@ -76,7 +71,6 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* Progress Stepper - Mobile (abaixo do header) */}
             <div className="lg:hidden px-5 py-2 border-t border-brand-sand/20">
                 <ProgressStepper steps={steps} activeSection={activeSection} />
             </div>
@@ -88,8 +82,11 @@ export default function Navbar() {
                             <button
                                 key={link.href}
                                 onClick={() => {
-                                    scrollTo(link.href);
                                     setOpen(false);
+                                    // Wait for mobile menu to collapse before calculating scroll target.
+                                    requestAnimationFrame(() => {
+                                        scrollTo(link.href);
+                                    });
                                 }}
                                 className="py-3 text-left text-sm font-medium tracking-wide text-white/80 transition-colors hover:text-white"
                             >

@@ -16,3 +16,13 @@ h1, h2, h3 {
   font-family: var(--font-serif);
 }
 
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (min-width: 1024px) {
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+}
+

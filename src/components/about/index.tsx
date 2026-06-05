@@ -74,7 +74,7 @@ const cards = [
 
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-28 px-4 py-16 sm:px-6 lg:px-8">
+    <section id="about" className="px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl">
         <FadeInScroll>
           <div className="max-w-3xl">
