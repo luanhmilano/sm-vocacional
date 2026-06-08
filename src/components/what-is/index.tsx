@@ -60,10 +60,6 @@ export default function WhatIs() {
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
             Como o processo vocacional é vivido
           </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-sienna/75 sm:text-base">
-            Uma leitura em formato de timeline, com etapas organizadas do
-            acolhimento ao amadurecimento da resposta vocacional.
-          </p>
         </div>
 
         <ol className="relative mt-10 space-y-6 before:absolute before:left-5 before:top-2 before:h-[calc(100%-0.5rem)] before:w-px before:bg-gradient-to-b before:from-slate-300 before:via-blue-300 before:to-brand-red sm:before:left-6 lg:mx-auto lg:max-w-5xl">
