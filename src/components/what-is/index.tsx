@@ -1,4 +1,6 @@
-﻿export default function WhatIs() {
+﻿import { HandsPrayingIcon, BookOpenIcon, HandHeartIcon } from "@phosphor-icons/react";
+
+export default function WhatIs() {
   const stages = [
     {
       name: "Postulantado",
@@ -7,44 +9,44 @@
       phaseLabel: "Pré-Vocacional",
       tone: {
         card: "bg-white",
-        border: "border-slate-200",
+        border: "border-slate-400",
         eyebrow: "text-slate-600",
-        badge: "bg-slate-900 text-white",
+        badge: "bg-slate-400 text-white",
         dot: "bg-slate-500",
         item: "bg-slate-50 text-slate-700 border-slate-200",
       },
       description:
-        "Texto de exemplo sobre o Postulantado. Aqui colocamos um parágrafo curto que descreve em linhas gerais o que acontece nessa fase e quais práticas são esperadas.",
+        "Nesse período, o postulante é convidado a aprofundar sua relação com Deus, ordenar sua vida espiritual, fortalecer as virtudes cristãs e crescer no conhecimento da Igreja e dos ensinamentos da fé. Trata-se de um tempo de formação humana, espiritual e doutrinal, preparando o coração para que, posteriormente, possa discernir com maior liberdade e maturidade um possível chamado ao carisma.",
     },
     {
       name: "Vocacional",
       subtitle: "Oração e Discernimento",
-      duration: "1 ano",
+      duration: "1° ano",
       tone: {
-        card: "bg-blue-50",
-        border: "border-blue-100",
-        eyebrow: "text-blue-700",
-        badge: "bg-blue-600 text-white",
-        dot: "bg-blue-600",
+        card: "bg-white",
+        border: "border-brand-blue/50",
+        eyebrow: "text-brand-blue/100",
+        badge: "bg-brand-blue text-white",
+        dot: "bg-brand-blue/60",
         item: "bg-white/90 text-blue-950 border-blue-100",
       },
       description:
-        "Breve descrição mock sobre a fase Vocacional. Texto de apoio explicando atividades típicas, encontros e momentos de acompanhamento espiritual.",
+        "É um tempo de construção da vida interior, de crescimento espiritual e de conhecimento do carisma do Movimento. Ao longo desse caminho, a pessoa também conhece os diversos ministérios e serviços existentes na comunidade, buscando compreender melhor sua identidade e missão. O objetivo principal dessa etapa é ajudar o vocacionado a discernir, diante de Deus, se deseja continuar caminhando rumo às etapas seguintes da consagração.",
     },
     {
       name: "Aspirantado",
       subtitle: "Serviço e Sacrifício",
-      duration: "1 ano",
+      duration: "2° ano",
       tone: {
-        card: "bg-red-50",
-        border: "border-red-100",
-        eyebrow: "text-red-700",
-        badge: "bg-red-600 text-white",
-        dot: "bg-red-600",
-        item: "bg-white/90 text-red-950 border-red-100",
+        card: "bg-white",
+        border: "border-brand-red/50",
+        eyebrow: "text-brand-red",
+        badge: "bg-brand-red text-white",
+        dot: "bg-brand-red",
+        item: "bg-white/90 text-brand-red border-brand-red/20",
       },
       description:
-        "Texto de exemplo sobre o Aspirantado. Um parágrafo mock para ilustrar as responsabilidades, experiências de serviço e provas de amadurecimento.",
+        "Após concluir o Vocacional, o membro ingressa no Aspirantado, que também é um período de formação e amadurecimento. Nessa etapa, o foco está no serviço e no sacrifício da vivência comunitária. O aspirante passa por todos os ministérios do Movimento, conhecendo de forma mais concreta suas atividades, espiritualidade e missão. É um tempo de integração, no qual ele aprende a servir, desenvolve seus dons e aprofunda sua experiência com o carisma, buscando uma identificação cada vez maior com a vocação à qual está sendo chamado.",
     },
   ];
 
@@ -59,59 +61,64 @@
             Como o processo vocacional é vivido
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-sienna/75 sm:text-base">
-            Uma leitura em formato de timeline, com etapas organizadas do acolhimento ao amadurecimento da resposta vocacional.
+            Uma leitura em formato de timeline, com etapas organizadas do
+            acolhimento ao amadurecimento da resposta vocacional.
           </p>
         </div>
 
-        <ol className="relative mt-10 space-y-6 before:absolute before:left-5 before:top-2 before:h-[calc(100%-0.5rem)] before:w-px before:bg-gradient-to-b before:from-slate-300 before:via-blue-300 before:to-red-300 sm:before:left-6 lg:mx-auto lg:max-w-5xl">
+        <ol className="relative mt-10 space-y-6 before:absolute before:left-5 before:top-2 before:h-[calc(100%-0.5rem)] before:w-px before:bg-gradient-to-b before:from-slate-300 before:via-blue-300 before:to-brand-red sm:before:left-6 lg:mx-auto lg:max-w-5xl">
           {stages.map((stage, index) => {
             const isLast = index === stages.length - 1;
 
             return (
-              <li key={stage.name} className="relative flex gap-4 pl-14 sm:gap-5 sm:pl-16">
+              <li
+                key={stage.name}
+                className="relative flex gap-4 pl-14 sm:gap-5 sm:pl-16"
+              >
                 {!isLast ? (
-                  <span className="absolute left-5 top-11 h-[calc(100%+1.5rem)] w-px bg-gradient-to-b from-brand-crimson/40 via-brand-cream to-transparent sm:left-6" />
+                  <span className="absolute left-5 top-11 h-[calc(100%+1.5rem)] w-px bg-gradient-to-b from-brand-red/40 via-brand-cream to-transparent sm:left-6" />
                 ) : null}
 
                 <div
                   className={`absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full ${stage.tone.badge} shadow-sm ring-4 ring-brand-pearl/80 sm:h-12 sm:w-12`}
                 >
-                  {/* Icons replacing numeric step */}
                   {index === 0 ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 text-white" aria-hidden>
-                      <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                    </svg>
+                    <BookOpenIcon size={20} weight="fill" className="text-white" aria-hidden />
                   ) : index === 1 ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 text-white" aria-hidden>
-                      <path fill="currentColor" d="M12 2a2 2 0 00-2 2v6H6a2 2 0 000 4h4v6a2 2 0 004 0v-6h4a2 2 0 000-4h-4V4a2 2 0 00-2-2z" />
-                    </svg>
+                    <HandsPrayingIcon size={20} weight="fill" className="text-white" aria-hidden />
                   ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 text-white" aria-hidden>
-                      <path fill="currentColor" d="M12 2s-4 4-4 7a4 4 0 008 0c0-3-4-7-4-7zM6 20a6 6 0 0112 0H6z" />
-                    </svg>
+                    <HandHeartIcon size={20} weight="fill" className="text-white" aria-hidden />
                   )}
                 </div>
 
                 <article
                   className={`min-w-0 flex-1 rounded-3xl border p-5 shadow-sm shadow-brand-crimson/5 sm:p-6 ${stage.tone.card} ${stage.tone.border}`}
                 >
-                  <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div className="flex flex-col items-start gap-3">
+                    <span
+                      className={`rounded-full px-3 py-1 text-xs font-semibold sm:text-sm ${stage.tone.badge}`}
+                    >
+                      {stage.duration}
+                    </span>
+
                     <div>
-                      <p className={`text-xs font-semibold uppercase tracking-[0.3em] ${stage.tone.eyebrow}`}>
+                      <p
+                        className={`text-xs font-semibold uppercase tracking-[0.3em] ${stage.tone.eyebrow}`}
+                      >
                         {stage.phaseLabel ?? `Estágio ${index}`}
                       </p>
                       <h3 className="mt-2 text-2xl font-semibold sm:text-3xl">
                         {stage.name}
                       </h3>
-                      <p className="mt-1 text-sm font-medium text-slate-700">{stage.subtitle}</p>
+                      <p className="mt-1 text-sm font-medium text-slate-700">
+                        {stage.subtitle}
+                      </p>
                     </div>
-
-                    <span className={`rounded-full px-3 py-1 text-xs font-semibold sm:text-sm ${stage.tone.badge}`}>
-                      {stage.duration}
-                    </span>
                   </div>
 
-                  <p className="mt-5 text-sm leading-7 text-slate-700">{stage.description}</p>
+                  <p className="mt-5 text-sm leading-7 text-slate-700">
+                    {stage.description}
+                  </p>
                 </article>
               </li>
             );
