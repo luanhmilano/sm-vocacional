@@ -1,30 +1,9 @@
-﻿import WhatsAppIcon from "../../assets/whatsapp-brands-solid-full.svg";
-import InstagramIcon from "../../assets/instagram-2016-logo-svgrepo-com.svg";
+﻿import InstagramIcon from "../../assets/instagram-2016-logo-svgrepo-com.svg";
 import GmailIcon from "../../assets/gmail-svgrepo-com.svg";
-import {
-  PRIMARY_PHONE,
-  SECONDARY_PHONE,
-} from "../utils/constants/zap-numbers.constant";
 import LogoVocacional from "../../assets/vocacional-logo.png";
-
-const phoneNumbers = [PRIMARY_PHONE, SECONDARY_PHONE];
-
-const text = encodeURIComponent(
-  "Olá! Conheci o Processo Vocacional 2026 pelo site e gostaria de receber mais informações sobre o caminho vocacional.",
-);
-
-function getRandomWhatsAppUrl() {
-  const phone = phoneNumbers[Math.floor(Math.random() * phoneNumbers.length)];
-
-  return `https://wa.me/${phone}?text=${text}`;
-}
+import { formsUrl } from "../utils/constants/form";
 
 export default function FooterCTA() {
-  function handleWhatsAppClick(event: React.MouseEvent<HTMLAnchorElement>) {
-    event.preventDefault();
-    window.open(getRandomWhatsAppUrl(), "_blank", "noopener,noreferrer");
-  }
-
   return (
     <>
       <section id="footer" className="px-3 py-12 sm:px-4 sm:py-16 lg:px-8">
@@ -37,86 +16,60 @@ export default function FooterCTA() {
             />
           </div>
 
-          <div className="space-y-4 sm:space-y-5">
+          <div className="space-y-5 sm:space-y-6">
             <div className="max-w-2xl space-y-3 text-center lg:text-left">
               <h2 className="text-[clamp(1.7rem,7vw,3rem)] font-semibold leading-tight tracking-tight">
-                Ficou interessado(a) em conhecer mais?
+                Ficou interessado(a)?
               </h2>
               <p className="mx-auto max-w-xl text-sm leading-7 text-white/78 sm:text-base lg:mx-0">
                 Se após conhecer o processo você sente o desejo de dar um passo
-                no discernimento vocacional, entre em contato conosco. Teremos
+                no discernimento vocacional, se inscreva pelo formulário. Teremos
                 alegria em caminhar com você.
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="space-y-5">
               <a
-                href={getRandomWhatsAppUrl()}
+                href={formsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Contatar pelo WhatsApp"
-                onClick={handleWhatsAppClick}
-                className="flex w-full min-w-0 items-center gap-3 rounded-2xl bg-[#25D366] px-4 py-3 text-left text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1ebe5b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-5 sm:py-4"
+                aria-label="Abrir formulário de contato"
+                className="inline-flex w-full items-center justify-center rounded-2xl bg-white px-5 py-4 text-sm font-semibold text-brand-crimson shadow-[0_18px_40px_-22px_rgba(0,0,0,0.45)] transition hover:-translate-y-0.5 hover:bg-brand-pearl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto sm:px-7 sm:text-base"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 sm:h-11 sm:w-11">
-                  <img
-                    src={WhatsAppIcon}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-4 w-4 sm:h-5 sm:w-5"
-                  />
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block text-sm sm:text-base">WhatsApp</span>
-                  <span className="block text-xs font-normal text-white/80">
-                    Fale com um coordenador
-                  </span>
-                </span>
+                Abrir formulário de inscrição
               </a>
 
-              <a
-                href="https://instagram.com/sementesdamisericordia"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar Instagram"
-                className="flex w-full min-w-0 items-center gap-3 rounded-2xl border border-white/14 bg-white/8 px-4 py-3 text-left text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-5 sm:py-4"
-              >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 sm:h-11 sm:w-11">
+              <div className="grid gap-2 border-t border-white/12 pt-4 text-sm text-white/72 sm:grid-cols-2 sm:gap-3">
+                <a
+                  href="https://instagram.com/sementesdamisericordia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visitar Instagram"
+                  className="inline-flex items-center gap-2 self-start transition hover:text-white"
+                >
                   <img
                     src={InstagramIcon}
                     alt=""
                     aria-hidden="true"
-                    className="h-4 w-4 sm:h-5 sm:w-5"
+                    className="h-4 w-4 opacity-75"
                   />
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block text-sm sm:text-base">Instagram</span>
-                  <span className="block break-words text-xs font-normal text-white/75">
-                    @sementesdamisericordia
-                  </span>
-                </span>
-              </a>
+                  <span>@sementesdamisericordia</span>
+                </a>
 
-              <a
-                href="mailto:sementesdamisericordia@gmail.com?subject=Informações%20Processo%20Vocacional&body=Olá!%20Gostaria%20de%20receber%20mais%20informações%20sobre%20o%20Processo%20Vocacional."
-                aria-label="Enviar email"
-                className="flex w-full min-w-0 items-center gap-3 rounded-2xl border border-white/14 bg-white/8 px-4 py-3 text-left text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:col-span-2 sm:px-5 sm:py-4 xl:col-span-1"
-              >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 sm:h-11 sm:w-11">
+                <a
+                  href="mailto:sementesdamisericordia@gmail.com?subject=Informações%20Processo%20Vocacional&body=Olá!%20Gostaria%20de%20receber%20mais%20informações%20sobre%20o%20Processo%20Vocacional."
+                  aria-label="Enviar email"
+                  className="inline-flex items-center gap-2 self-start transition hover:text-white"
+                >
                   <img
                     src={GmailIcon}
                     alt=""
                     aria-hidden="true"
-                    className="h-4 w-4 sm:h-5 sm:w-5"
+                    className="h-4 w-4 opacity-75"
                   />
-                </span>
-                <span className="min-w-0 flex-1 break-words">
-                  <span className="block text-sm sm:text-base">E-mail</span>
-                  <span className="block text-xs font-normal text-white/75">
-                    sementesdamisericordia@gmail.com
-                  </span>
-                </span>
-              </a>
+                  <span>sementesdamisericordia@gmail.com</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

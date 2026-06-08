@@ -62,7 +62,7 @@ const cards = [
         <strong>cada membro encontra um lugar para servir e evangelizar</strong>
         . O Movimento Sementes da Misericórdia é formado pelos ministérios de{" "}
         <strong>Vocacional</strong>, <strong>Música</strong>,{" "}
-        <strong>Artes</strong>,<strong>Formação e Pregação</strong>,{" "}
+        <strong>Artes</strong>, <strong>Formação e Pregação</strong>,{" "}
         <strong>Comunicação</strong>, <strong>Liturgia</strong>,{" "}
         <strong>Intercessão</strong>, <strong>Cáritas</strong> e{" "}
         <strong>Kids</strong>, que juntos promovem a vivência do nosso carisma e

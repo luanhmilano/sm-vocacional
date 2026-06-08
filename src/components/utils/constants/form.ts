@@ -1,0 +1,1 @@
+export const formsUrl = import.meta.env.VITE_FORMS_URL;
