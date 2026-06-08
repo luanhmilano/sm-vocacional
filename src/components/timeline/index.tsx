@@ -12,40 +12,52 @@ export default function Timeline() {
                 </div>
 
                 <ul className="mt-10 space-y-6">
-                    <li className="flex gap-4">
-                        <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">1</span>
+                    <li className="flex gap-4 items-start">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">1</span>
                         <div>
-                            <h3 className="text-lg font-semibold">Interesse Inicial</h3>
+                            <h3 className="text-lg font-semibold">Consentimento sobre o processo</h3>
                         </div>
                     </li>
-                    <li className="flex gap-4">
-                        <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">2</span>
+                    <li className="flex gap-4 items-start">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">2</span>
                         <div>
-                            <h3 className="text-lg font-semibold">Contato com a coordenação vocacional</h3>
+                            <h3 className="text-lg font-semibold">Inscrição via Forms</h3>
                         </div>
                     </li>
-                    <li className="flex gap-4">
-                        <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">3</span>
+                    <li className="flex gap-4 items-start">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">3</span>
                         <div>
-                            <h3 className="text-lg font-semibold">Inscrição no processo</h3>
+                            <h3 className="text-lg font-semibold">Contato da coordenação vocacional com o interessado</h3>
                         </div>
                     </li>
-                    <li className="flex gap-4">
-                        <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">4</span>
+                    <li className="flex gap-4 items-start">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">4</span>
                         <div>
-                            <h3 className="text-lg font-semibold">Acompanhamento</h3>
+                            <h3 className="text-lg font-semibold">Entrevistas</h3>
                         </div>
                     </li>
-                    <li className="flex gap-4">
-                        <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">5</span>
+                    <li className="flex gap-4 items-start">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">5</span>
                         <div>
-                            <h3 className="text-lg font-semibold">Vivência do processo</h3>
+                            <h3 className="text-lg font-semibold">Início do Postulantado (6 meses)</h3>
                         </div>
                     </li>
-                    <li className="flex gap-4">
-                        <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">6</span>
+                    <li className="flex gap-4 items-start">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">6</span>
                         <div>
-                            <h3 className="text-lg font-semibold">Discernimento</h3>
+                            <h3 className="text-lg font-semibold">Ingresso Vocacional (1 ano)</h3>
+                        </div>
+                    </li>
+                    <li className="flex gap-4 items-start">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">7</span>
+                        <div>
+                            <h3 className="text-lg font-semibold">Transição para o Aspirantado (1 ano)</h3>
+                        </div>
+                    </li>
+                    <li className="flex gap-4 items-start">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-crimson text-sm font-semibold text-white">8</span>
+                        <div>
+                            <h3 className="text-lg font-semibold">Discernimento para a vida consagrada</h3>
                         </div>
                     </li>
                 </ul>
