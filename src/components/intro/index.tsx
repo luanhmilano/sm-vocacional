@@ -3,51 +3,65 @@
 import banner from "../../assets/banner-jesus.png";
 
 function scrollToAbout() {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
 }
 
 export default function Intro() {
-    return (
-        <section id="intro" className="flex h-[calc(100svh-3.5rem)] flex-col lg:h-[calc(100svh-4rem)]">
-            <div className="relative h-[50svh] shrink-0 overflow-hidden bg-brand-pearl md:h-3/6 md:max-h-[615px] lg:h-3/6 lg:max-h-[615px]">
-                <img
-                    src={banner}
-                    alt="Banner principal do Processo Vocacional 2026"
-                    className="absolute top-0 left-1/2 h-full w-screen max-w-none -translate-x-1/2 object-cover object-center opacity-75"
-                />
+  return (
+    <section
+      id="intro"
+      className="flex h-[calc(100svh-3.5rem)] flex-col lg:h-[calc(100svh-4rem)]"
+    >
+      <div className="relative h-[50svh] shrink-0 overflow-hidden bg-brand-pearl md:h-3/6 md:max-h-[615px] lg:h-3/6 lg:max-h-[615px]">
+        <img
+          src={banner}
+          alt="Banner principal do Processo Vocacional 2026"
+          className="absolute top-0 left-1/2 h-full w-screen max-w-none -translate-x-1/2 object-cover object-center opacity-75"
+        />
 
-                <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 px-6 text-center text-white sm:gap-2">
-                    <img src={logo} alt="Sementes da Misericórdia" className="h-40 w-auto object-contain sm:h-44 md:h-44 lg:h-40 opacity-40" />
-                    <h1 className="text-xl font-semibold tracking-widest uppercase sm:text-2xl md:text-2xl lg:text-3xl">
-                        Processo Vocacional 2026
-                    </h1>
-                    <hr className="w-16 border-t border-white/50 sm:w-20" />
-                    <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/70 sm:text-sm md:text-sm">
-                        Movimento Sementes da Misericórdia
-                    </p>
-                </div>
+        <div className="absolute inset-0 flex flex-col px-6 py-6 text-center text-white sm:px-10 sm:py-8">
+          <div className="flex flex-1 items-end justify-center md:items-center">
+            <div className="mb-4 flex flex-col items-center gap-1.5 sm:mb-0 sm:gap-2">
+              <h1 className="text-xl font-semibold tracking-widest uppercase sm:text-2xl md:text-2xl lg:text-3xl">
+                Processo Vocacional
+              </h1>
+              <hr className="w-16 border-t border-white/50 sm:w-20" />
+              <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/70 sm:text-sm md:text-sm">
+                Movimento Sementes da Misericórdia
+              </p>
             </div>
+          </div>
 
-            {/* CITAÇÃO + BOTÃO */}
-            <div className="flex flex-1 flex-col items-center justify-center gap-5 bg-brand-pearl px-6 text-center sm:px-10">
-                <blockquote className="max-w-2xl">
-                    <p className="text-3xl leading-snug font-light tracking-tight text-brand-sienna sm:text-2xl md:text-3xl lg:text-3xl xl:text-5xl">
-                        "Não fostes vós que me escolhestes; fui eu que vos escolhi."
-                    </p>
-                    <footer className="mt-3 text-sm font-semibold uppercase tracking-[0.3em] text-brand-sienna sm:text-base">
-                        João 15, 16
-                    </footer>
-                </blockquote>
+          <div className="flex justify-center pb-2 sm:pb-1">
+            <img
+              src={logo}
+              alt="Sementes da Misericórdia"
+              className="h-16 w-auto object-contain sm:h-20 md:h-20 lg:h-20"
+            />
+          </div>
+        </div>
+      </div>
 
-                <button
-                    onClick={scrollToAbout}
-                    className="mt-1 rounded-full bg-brand-crimson px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-crimson/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-crimson sm:px-10 sm:py-4 sm:text-base"
-                >
-                    Quero conhecer o processo
-                </button>
-            </div>
-        </section>
-    );
+      {/* CITAÇÃO + BOTÃO */}
+      <div className="flex flex-1 flex-col items-center justify-center gap-5 bg-brand-pearl px-6 text-center sm:px-10">
+        <blockquote className="max-w-2xl">
+          <p className="text-3xl leading-snug font-light tracking-tight text-brand-sienna sm:text-2xl md:text-3xl lg:text-3xl xl:text-5xl">
+            "Não fostes vós que me escolhestes; fui eu que vos escolhi."
+          </p>
+          <footer className="mt-3 text-sm font-semibold uppercase tracking-[0.3em] text-brand-sienna sm:text-base">
+            João 15, 16
+          </footer>
+        </blockquote>
+
+        <button
+          onClick={scrollToAbout}
+          className="mt-1 rounded-full bg-brand-crimson px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-crimson/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-crimson sm:px-10 sm:py-4 sm:text-base"
+        >
+          Quero conhecer o processo
+        </button>
+      </div>
+    </section>
+  );
 }

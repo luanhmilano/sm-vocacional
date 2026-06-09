@@ -4,7 +4,6 @@ import Intro from "./components/intro";
 import { FadeInScroll } from "./components/utils/wrapper";
 
 const About = lazy(() => import("./components/about"));
-const Checklist = lazy(() => import("./components/checklist"));
 const FooterCTA = lazy(() => import("./components/footer"));
 const Testemonial = lazy(() => import("./components/testimonial"));
 const Timeline = lazy(() => import("./components/timeline"));
@@ -42,9 +41,6 @@ function App() {
           </FadeInScroll>
           <FadeInScroll>
             <Testemonial />
-          </FadeInScroll>
-          <FadeInScroll>
-            <Checklist />
           </FadeInScroll>
           <FadeInScroll>
             <FooterCTA />

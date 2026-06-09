@@ -10,7 +10,7 @@ const navLinks = [
     { id: "what-is-not", label: "O que não é", href: "#what-is-not" },
     { id: "timeline", label: "Etapas", href: "#timeline" },
     { id: "testimonial", label: "Depoimentos", href: "#testimonial" },
-    { id: "checklist", label: "Inscrição", href: "#checklist" },
+    { id: "subscribe", label: "Inscrição", href: "#footer" },
 ];
 
 const steps = [
